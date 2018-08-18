@@ -1,8 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700|Ubuntu:300,400');
 @import '~@angular/material/theming';
 
-@include mat-core();
-
+//Material Color theme config
 $app-primary-color: mat-palette($mat-blue);
 $app-accent-color: mat-palette($mat-light-green);
 $app-theme: mat-light-theme($app-primary-color, $app-accent-color);
 @include angular-material-theme($app-theme);
+
+//Material typography
+$typography: mat-typography-config(
+  $font-family: 'Roboto, Ubuntu',
+  $headline: mat-typography-level(32px, 48px, 700),
+  $body-1: mat-typography-level(16px, 24px, 500)
+);
+
+@include mat-base-typography($typography);
+@include mat-checkbox-typography($typography);
+@include angular-material-typography($typography);
+
+@include mat-core($typography);

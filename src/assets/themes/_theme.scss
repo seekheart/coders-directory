@@ -2,9 +2,9 @@
 @import '~@angular/material/theming';
 
 //Material Color theme config
-$app-primary-color: mat-palette($mat-blue);
-$app-accent-color: mat-palette($mat-light-green);
-$app-theme: mat-light-theme($app-primary-color, $app-accent-color);
+$app-primary-color: mat-palette($mat-green, A400);
+$app-accent-color: mat-palette($mat-blue, 300);
+$app-theme: mat-dark-theme($app-primary-color, $app-accent-color);
 @include angular-material-theme($app-theme);
 
 //Material typography

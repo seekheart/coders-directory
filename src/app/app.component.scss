@@ -3,10 +3,19 @@
     flex: 1 1 auto;
   }
   .toolbar-menu-container {
+    height: auto;
     display: flex;
     justify-content: space-between;
     * {
       flex: 1 0 auto;
     }
+  }
+}
+
+#app-container {
+  display: flex;
+  mat-sidenav-container {
+    width: 200px;
+    height: 100vh;
   }
 }

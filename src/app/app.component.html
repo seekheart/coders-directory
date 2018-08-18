@@ -1,19 +1,26 @@
-<mat-toolbar [color]="'primary'" id="toolbar">
-  <button class="menu-toggle-btn" mat-button="">
-    <mat-icon>reorder</mat-icon>
-  </button>
-  <div class="spacer"></div>
-  <h1 class="tool-bar-title">Coder's Directory</h1>
-  <div class="spacer"></div>
-  <div class="toolbar-menu-container">
-    <button class="menu-icon-btn" mat-button="">
-      <mat-icon>home</mat-icon>
+<div id="app-container" class="mat-app-background">
+  <mat-sidenav-container class="side-nav-container" *ngIf="sideNavIsOpened">
+    <mat-sidenav #sidenav mode="side">
+    </mat-sidenav>
+    <mat-sidenav-content>Test</mat-sidenav-content>
+  </mat-sidenav-container>
+  <mat-toolbar [color]="'primary'" id="toolbar">
+    <button class="menu-toggle-btn" mat-button (click)="onToggleSideNav()">
+      <mat-icon>reorder</mat-icon>
     </button>
-    <button class="menu-icon-btn" mat-button>
-      <mat-icon>people</mat-icon>
-    </button>
-    <button class="menu-icon-btn" mat-button>
-      <mat-icon>account_box</mat-icon>
-    </button>
-  </div>
-</mat-toolbar>
+    <div class="spacer"></div>
+    <h1 class="tool-bar-title">Coder's Directory</h1>
+    <div class="spacer"></div>
+    <div class="toolbar-menu-container">
+      <button class="menu-icon-btn" mat-button="">
+        <mat-icon>home</mat-icon>
+      </button>
+      <button class="menu-icon-btn" mat-button>
+        <mat-icon>people</mat-icon>
+      </button>
+      <button class="menu-icon-btn" mat-button>
+        <mat-icon>account_box</mat-icon>
+      </button>
+    </div>
+  </mat-toolbar>
+</div>

@@ -1,7 +1,8 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
 #toolbar {
-  .spacer {
-    flex: 1 1 auto;
-  }
   .toolbar-menu-container {
     height: auto;
     display: flex;
@@ -13,9 +14,21 @@
 }
 
 #app-container {
+  height: 100vh;
   display: flex;
-  mat-sidenav-container {
-    width: 200px;
-    height: 100vh;
+  overflow: auto;
+
+  .main-content-container {
+    width: 100%;
+    .content {
+      height: 100%;
+      .content-layout {
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+      }
+    }
   }
+
 }
+

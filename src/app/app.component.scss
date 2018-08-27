@@ -1,0 +1,39 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+#toolbar {
+  .side-nav-btn, .menu-icon-btn {
+    max-width: 100px;
+  }
+  .side-nav-btn {
+    flex: 1 0 auto;
+  }
+  .tool-bar-title {
+    margin-right: 10px;
+  }
+  .toolbar-menu-container {
+    display: flex;
+    flex: 0 1 auto;
+    justify-content: space-between;
+    .menu-icon-btn {
+      flex: 1;
+    }
+  }
+}
+
+#app-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidenav-container {
+  height: 100vh;
+  padding-top: 24px;
+}
+
+.content {
+  padding: 0 20px;
+}
+

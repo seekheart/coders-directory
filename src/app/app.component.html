@@ -8,7 +8,7 @@
       <h1 class="tool-bar-title">Coder's Directory</h1>
       <div class="spacer"></div>
       <div class="toolbar-menu-container">
-        <button class="menu-icon-btn" mat-button="">
+        <button class="menu-icon-btn" mat-button="" routerLink="/">
           <mat-icon>home</mat-icon>
         </button>
         <button class="menu-icon-btn" mat-button>
@@ -22,13 +22,13 @@
     <mat-sidenav-container class="sidenav-container">
       <mat-sidenav #snav [mode]="'side'">
         <mat-nav-list>
-          <a mat-list-item routerLink="." class="side-nav-link" *ngFor="let item of items">
+          <a mat-list-item routerLink="/users" class="side-nav-link" *ngFor="let item of items">
             {{ item }}
           </a>
         </mat-nav-list>
       </mat-sidenav>
       <mat-sidenav-content>
-        <p class="content"></p>
+        <router-outlet></router-outlet>
       </mat-sidenav-content>
     </mat-sidenav-container>
   </div>

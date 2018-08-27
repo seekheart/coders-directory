@@ -6,9 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  sideNavIsOpened = false;
-
-  onToggleSideNav(): void {
-    this.sideNavIsOpened = !this.sideNavIsOpened;
-  }
+  items = [
+    'users',
+    'languages',
+  ];
 }

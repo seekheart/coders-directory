@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '@coder/shared/models/user';
+import { User } from '@coder/shared/models/user.model';
 import { Observable } from 'rxjs';
-import { UserService } from '@coder/core/user.service';
 import { Router } from '@angular/router';
+import { UserService } from '@coder/core/user.service';
+
 
 @Component({
   selector: 'app-user-home',
@@ -11,6 +12,7 @@ import { Router } from '@angular/router';
 })
 export class UserHomeComponent implements OnInit {
   users$: Observable<User[]>;
+  userSelected = false;
 
   constructor(protected userService: UserService, protected router: Router) {
   }
@@ -20,6 +22,7 @@ export class UserHomeComponent implements OnInit {
   }
 
   onViewProfile(id: number): void {
+    this.userSelected = true;
     this.router.navigateByUrl(`/users/${id}`);
   }
 }

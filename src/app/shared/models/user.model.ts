@@ -1,8 +1,8 @@
-import { ProgrammingLanguage } from '@coder/shared/models/programming-language';
+import { ProgrammingLanguage } from '@coder/shared/models/programming-language.model';
 
 export interface User {
   id: number;
-  userName: string;
+  userName?: string;
   avatar?: string;
   bio?: string;
   email?: string;

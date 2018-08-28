@@ -18,7 +18,7 @@ import { CoreModule } from '@coder/core/core.module';
     MatModule,
     HomeModule,
     UsersModule,
-    CoreModule
+    CoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

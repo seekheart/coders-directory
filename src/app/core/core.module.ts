@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { UserService } from '@coder/core/user.service';
 
 @NgModule({
   imports: [
     HttpClientModule
   ],
-  declarations: [
-    UserService
+  exports: [
+    HttpClientModule
   ]
 })
 export class CoreModule {

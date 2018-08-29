@@ -1,5 +1,32 @@
 <div class="profile-container">
-  <pre>
-    {{ user$ | async | json }}
-  </pre>
+  <div class="avatar-section">
+    <section class="mat-typography">
+      <h1 class="user-headline">{{ user?.userName }}</h1>
+    </section>
+    <img src="{{ user?.avatar }}" alt="" class="avatar">
+  </div>
+  <div class="bio-section">
+    <section class="mat-typography">
+      <h2 class="section-header">About Me</h2>
+      <p> {{ user?.bio }}</p>
+    </section>
+  </div>
+  <div class="skills-section">
+    <section class="mat-typography">
+      <h2 class="section-header">Skills</h2>
+      <mat-chip-list class="mat-chip-list-stacked">
+        <mat-chip class="skill-item" selected [color]="'accent'"
+                  *ngFor="let skill of user?.programmingLanguages">
+          {{ skill.name }}
+        </mat-chip>
+      </mat-chip-list>
+    </section>
+  </div>
+  <div class="contact-section">
+    <section class="mat-typography">
+      <h2 class="section-header">Contact Me</h2>
+      <a class="github-link" href="{{ user?.github }}">Github</a>
+      <p class="email">{{ user?.email }}</p>
+    </section>
+  </div>
 </div>

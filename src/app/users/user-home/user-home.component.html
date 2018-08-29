@@ -1,0 +1,24 @@
+<div class="user-home-container">
+  <div class="user-list" *ngIf="!userSelected; else profile">
+    <mat-card class="user-card" *ngFor="let user of (users$ | async)">
+      <mat-card-header class="user-card-header">
+        <mat-card-title> {{ user?.userName }}</mat-card-title>
+      </mat-card-header>
+      <img src="{{ user?.avatar }}" alt="" class="user-icon">
+      <mat-card-content>
+        <p class="user-bio">
+          {{ user?.bio }}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button class="user-detail-btn" mat-button (click)="onViewProfile(user.id)">View
+          Profile
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  <ng-template #profile>
+    <router-outlet></router-outlet>
+  </ng-template>
+</div>
+

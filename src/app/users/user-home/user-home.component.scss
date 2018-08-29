@@ -1,0 +1,17 @@
+.user-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.user-card {
+  max-width: 400px;
+  flex: 1 1 auto;
+  margin: 2px;
+  .user-bio {
+    width: 400px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}

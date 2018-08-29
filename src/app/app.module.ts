@@ -3,7 +3,10 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MaterialModule } from './shared/material/material.module';
+import { MatModule } from './shared/material/mat.module';
+import { HomeModule } from '@coder/home/home.module';
+import { UsersModule } from '@coder/users/users.module';
+import { CoreModule } from '@coder/core/core.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +15,10 @@ import { MaterialModule } from './shared/material/material.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MaterialModule
+    MatModule,
+    HomeModule,
+    UsersModule,
+    CoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

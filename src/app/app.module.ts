@@ -7,6 +7,7 @@ import { MatModule } from './shared/material/mat.module';
 import { HomeModule } from '@coder/home/home.module';
 import { UsersModule } from '@coder/users/users.module';
 import { CoreModule } from '@coder/core/core.module';
+import { RegistrationModule } from '@coder/registration/registration.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { CoreModule } from '@coder/core/core.module';
     MatModule,
     HomeModule,
     UsersModule,
+    RegistrationModule,
     CoreModule,
   ],
   providers: [],

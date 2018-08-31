@@ -13,7 +13,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
   ],
   declarations: [
     UserHomeComponent,
-    UserProfileComponent
+    UserProfileComponent,
   ]
 })
 export class UsersModule {

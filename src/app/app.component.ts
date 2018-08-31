@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavItem } from '@coder/shared/models/nav-item.model';
 
 @Component({
   selector: 'app-root',
@@ -6,8 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  items = [
-    'users',
-    'languages',
+  items: NavItem[] = [
+    {name: 'users', link: '/users'},
+    {name: 'languages', link: '/languages'},
   ];
 }

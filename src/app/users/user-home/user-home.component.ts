@@ -18,7 +18,7 @@ export class UserHomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.users$ = this.userService.findAll();
+    this.users$ = this.userService.users$;
   }
 
   onViewProfile(id: number): void {

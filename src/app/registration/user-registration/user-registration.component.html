@@ -1,3 +1,42 @@
-<p>
-  user-registration works!
-</p>
+<form [formGroup]="userForm" class="user-registration" (ngSubmit)="onSubmit()">
+  <h3 class="form-section-label">Basic Information</h3>
+  <div class="form-input-container">
+    <label for="user-name" class="form-label">Username:</label>
+    <input type="text" id="user-name" formControlName="username" name="username" required>
+  </div>
+  <div class="form-input-container">
+    <label for="email" class="form-label">Email:</label>
+    <input type="text" id="email" formControlName="email" name="email">
+  </div>
+  <div class="form-input-container">
+    <label for="avatar" class="form-label">Avatar</label>
+    <input type="text" name="avatar" formControlName="avatar" id="avatar">
+  </div>
+  <div class="form-input-container">
+    <label for="bio" class="form-label">About Me</label>
+    <input type="text" name="bio" formControlName="bio" id="bio">
+  </div>
+  <div class="form-input-container">
+    <label for="github" class="form-label">Github</label>
+    <input type="text" name="github" id="github" formControlName="github">
+  </div>
+
+  <div class="form-section" formArrayName="programmingLanguages">
+    <h3 class="form-section-label">Skills</h3>
+    <div class="form-input-container"
+         *ngFor="let skill of programmingLanguages.controls; let i=index">
+      <label class="form-label">Skill:</label>
+      <input type="text" [formControlName]="i">
+    </div>
+    <button type="button" class="add-skill" (click)="addProgrammingLanguage()">Add Skill</button>
+  </div>
+
+
+  <button type="submit" [disabled]="!userForm.valid" class="submit-btn">Submit</button>
+</form>
+
+<div class="answers-panel">
+  <pre>
+    {{ userForm.value | json}}
+  </pre>
+</div>
